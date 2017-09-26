@@ -3,4 +3,4 @@ Options +FollowSymlinks
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 
-RewriteRule ^([a-z]+)$ index.php?page=$1&url2&url3&url4 [QSA,L]
+RewriteRule ^([a-z_]+)$ index.php?page=$1&url2&url3&url4 [QSA,L]

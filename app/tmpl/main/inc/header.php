@@ -5,6 +5,6 @@
 	<title><?=$this -> config['SITE_NAME'] . " - " . $this -> title_page?></title>
 	<?=$this -> js( [ 'jquery', 'main' ] )?>
 	<?=$this -> css( [ 'main', 'menu' ] )?>
-	<?=$this -> font( [ 'Roboto', 'Ubuntu', 'Open+Sans', 'Open+Sans+Condensed:300' ] )?>
+	<?=$this -> font( [ 'Roboto', 'Ubuntu', 'Open+Sans', 'Wendy+One' ] )?>
 </head>
 <body>
