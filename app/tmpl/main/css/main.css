@@ -1,0 +1,393 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	width: 100%;
+}
+
+.a-block {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.horizontal ul {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+
+
+
+/*---------------Стили верхнего контейнера-------------------*/
+
+@media all and ( min-width: 1400px ) 
+{
+	* {
+		transition: 1.5s;
+		font-size: 1vw;
+	}
+
+	#top-container {
+		height: 3vw;
+		background: #24292E;
+		position: fixed;
+		z-index: 999;
+	}
+
+	#under {
+		height: 3vw;
+	}
+
+	#top-container .middle-container {
+		height: 100%;
+		width: 80%;
+		margin: 0 10%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: #fff;
+	}
+
+	#top-container .logotype {
+		background-image: url( http://site/app/tmpl/main/img/logo/main.logo.png );
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+		background-position: center;
+		opacity: .9;
+		width: 2vw;
+		height: 2vw;
+	}
+
+	#top-container .logotype:hover {
+		opacity: 1;
+		transition: 1s;
+	}
+
+	.horizontal a{
+		color: #fff;
+		font-size: 1.1vw;
+		font-family: 'Ubuntu', sans-serif;
+	}
+
+	.horizontal li {
+		margin-right: 2vw;
+	}
+
+	.horizontal li:hover {
+		border-bottom: .1vw solid #E6E8EA;
+	}
+
+	.horizontal li:last-child {
+		margin-right: 0;
+	}
+
+	#top-links-auth {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		font-size: .8vw;
+		color: #425869;
+	}
+
+	#top-links-auth a {
+		color: #fff;
+		font-size: 1.1vw;
+	}
+
+	#top-links-auth a:first-child {
+		margin-right: 1vw;
+	}
+
+	#top-links-auth a:last-child {
+		margin-left: 1vw;
+	}
+
+	#top-container .search{
+		width: 20%;
+		height: 1.5vw;
+	}
+
+	#top-search-form {
+		width: 100%;
+		height: 100%;
+	}
+
+	#top-search-form .input-search {
+		height: 100%;
+		border: 0;
+		border-radius: .2vw;
+		padding: 0 1vw;
+		width: calc( 100% - 2vw );
+		background: #3F4448;
+		color: #fff;
+		font-family: 'Ubuntu', sans-serif;
+		font-stretch: ultra-condensed;
+		font-size: .9vw;
+	}
+
+	#top-search-form .input-search:hover {
+		background: #4B4F53;
+	}
+
+
+}
+
+@media all and ( min-width: 900px ) and ( max-width: 1399px )
+{
+	* {
+		transition: 1.5s;
+		font-size: 1.5vw;
+	}
+
+	#top-container {
+		height: 6vw;
+		background: #24292E;
+	}
+
+	#under {
+		height: 6vw;
+	}
+
+	#top-container .middle-container {
+		height: 100%;
+		width: 90%;
+		margin: 0 5%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: #fff;
+	}
+
+	#top-container .logotype {
+		background-image: url( http://site/app/tmpl/main/img/logo/main.logo.png );
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+		background-position: center;
+		opacity: .9;
+		width: 4vw;
+		height: 4vw;
+	}
+
+	#top-container .logotype:hover {
+		opacity: 1;
+		transition: 1s;
+	}
+
+	.horizontal a{
+		color: #fff;
+		font-size: 1.5vw;
+		font-family: 'Ubuntu', sans-serif;
+	}
+
+	.horizontal li {
+		margin-right: 2.2vw;
+	}
+
+	.horizontal li:hover {
+		border-bottom: .1vw solid #E6E8EA;
+	}
+
+	.horizontal li:last-child {
+		margin-right: 0;
+	}
+
+	#top-links-auth {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		font-size: 1.1vw;
+		color: #425869;
+	}
+
+	#top-links-auth a {
+		color: #fff;
+		font-size: 1.5vw;
+	}
+
+	#top-links-auth a:first-child {
+		margin-right: 1.3vw;
+	}
+
+	#top-links-auth a:last-child {
+		margin-left: 1.3vw;
+	}
+
+	#top-container .search{
+		display: none;
+	}
+
+	#top-search-form {
+		width: 100%;
+		height: 100%;
+	}
+
+	#top-search-form .input-search {
+		
+	}
+
+	#top-search-form .input-search:hover {
+		background: #4B4F53;
+	}
+}
+
+
+/*---------------------Конец стилей--------------------------*/
+
+/*-----------------Стили главного контейнера------------------*/
+
+@media all and ( min-width: 1400px ) 
+{
+	#main-container {
+		min-height: calc( 100vh - 3vw );
+	}
+
+	#main-container .block-page {
+		min-height: 100vh;
+		width: 100%;
+		background-position: center;
+	}
+
+	#first-block-main-page {
+		background-image: url( http://site/app/tmpl/main/img/bg/bg_1.png );
+		min-height: calc( 100vh - 3vw );
+	}
+
+	.black-mask {
+		background: rgba(0,0,0,.92);
+		width: 100%;
+		min-height: calc( 100vh - 3vw );
+	}
+
+	.block-page .intro-block {
+		width: 80%;
+		min-height: calc( 100vh - 3vw );
+		margin: 0 10%;
+	}
+
+	.flex-center-block {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.big-title {
+		font-size: 2vw;
+		font-weight: bold;
+		color: #fff;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	#first-block-main-page .text {
+		color: #fff;
+		font-size: 1.4vw;
+		font-family: 'Ubuntu', sans-serif;
+	}
+
+	#first-block-main-page .big-title {
+		margin-bottom: 2vw;
+	}
+
+	#first-block-main-page .text-desc {
+		font-size: 1.1vw;
+		color: #ddd;
+		font-family: 'Ubuntu', sans-serif;
+		margin: 1vw 0;
+	}
+
+	#first-block-main-page .b-l {
+		width: 48%;
+	}
+
+	.b-l .big-title, .b-l .text-desc, .b-l .text {
+		text-align: right;
+	}
+
+	#first-block-main-page .b-r {
+		width: 48%;
+	}
+
+	#fast-regist-from-main-page {
+		padding: 1vw 1vw;
+		background: #fff;
+		width: 60%;
+		border-radius: .3vw;
+	}
+
+	#fast-regist-from-main-page .title-form {
+		font-size: 1.1vw;
+		font-weight: bold;
+		text-align: center;
+		padding-bottom: .5vw;
+		border-bottom: .1vw solid rgba(0,0,0,.3);
+	}
+
+	.input-field {
+		width: 100%;
+		margin-top: 1vw;
+		padding-bottom: 1vw;
+		border-bottom: .1vw solid rgba(0,0,0,.3);
+	}
+
+	.input-field label {
+		font-size: .9vw;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-family: 'Ubuntu', sans-serif;
+		color: rgba(0,0,0,.7);
+	}
+
+	.input-field .input {
+		width: calc( 80% - 2vw );
+		padding: 0 1vw;
+		height: 2.3vw;
+		border: .1vw solid rgba(0,0,0,.3);
+		border-radius: .2vw;
+		box-shadow: 0 0 .3vw rgba(0,0,0,.5);
+		font-size: .9vw;
+		font-family: 'Ubuntu', sans-serif;
+		color: #333;
+		margin: .2vw 0;
+	}
+
+	.submit-field input {
+		height: 2.7vw;
+		background: #2EBC4F;
+		color: #fff;
+		border: 0;
+		border-radius: .2vw;
+		width: 100%;
+		margin-top: 1vw;
+		font-family: 'Ubuntu', sans-serif;
+		font-size: 1.2vw;
+	}
+
+	.submit-field input:hover {
+		transition: .1s;
+		cursor: pointer;
+		box-shadow: 0 0 .8vw rgba(0,0,0,.5);
+	}
+
+
+
+
+}
+
+@media all and ( min-width: 900px ) and ( max-width: 1399px )
+{
+
+}
+
+/*---------------------Конец стилей--------------------------*/
