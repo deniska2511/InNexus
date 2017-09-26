@@ -10,6 +10,7 @@ abstract class Main
 	{
 		// подключение контроллеров
 		{
+			include "core/controllers/redirect.php";
 			include "core/controllers/DB.php";
 			include "core/controllers/User.php";
 		}
