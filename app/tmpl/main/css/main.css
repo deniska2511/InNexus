@@ -465,6 +465,7 @@ footer .middle-container {
 	border: .1vw solid rgba(0,0,0,.2);
 	padding: 1vw;
 	border-radius: .2vw;
+	margin: 5vw 0;
 }
 
 #regist-form .title-form {
@@ -602,16 +603,111 @@ footer .middle-container {
 	margin: .5vw 0;
 }
 
+.radio-field {
+	width: 40%;
+	height: 100%;
+}
 
+.radio-field .tarif-list {
+	border: .03vw solid rgba(0,0,0,.3);
+	height: 2vw;
+	margin: .5vw 0;
+	border-radius: .2vw;
+}
 
+.radio-field .tarif-list:hover {
+	background: #fafbfc;
+}
 
+.radio-field .tarif-list label {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 0 1vw;
+	width: calc( 100% - 2vw );
+}
 
+.tarif-list .text {
+	margin: 0 1vw;
+	font-size: .9vw;
+	font-weight: bold;
+	color: #555fa1;
+	font-family: 'Ubuntu', sans-serif;
+}
 
+.radio-field .tarif-list label:hover {
+	cursor: pointer;
+}
 
+#trafic-right-block {
+	margin-top: .5vw;
+	width: 45%;
+	background: #fafbfc;
+}
 
+.right-block-form ul ul {
+	margin-left: 1.5vw;
+}
 
+.right-block-form .fir {
+	font-weight: bold;
+	color: #444;
+}
 
+.radio-field .checkbox-field {
+	height: 2vw;
+	border: .03vw solid rgba(0,0,0,.3);
+	margin-top: 2vw;
+	width: 120%;
+}
 
+.radio-field .checkbox-field:last-child {
+	margin-top: .5vw;
+}
 
+.radio-field .checkbox-field label{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 0 1vw;
+}
 
+.radio-field .checkbox-field .text {
+	font-size: .8vw;
+	color: rgba(0,0,0,.8);
+}
 
+.date-field {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+#date-field #day {
+	width: 10%;
+	text-align: center;
+}
+
+#date-field #month {
+	width: 20%;
+	text-align: center;
+}
+
+#date-field #year {
+	width: 20%;
+	text-align: center;
+}
+
+select {
+	height: 2vw;
+	padding: 0 1vw;
+	font-size: .9vw;
+	border-radius: .2vw;
+	margin-top: .5vw;
+}
+
+select:hover {
+	cursor: pointer;
+}

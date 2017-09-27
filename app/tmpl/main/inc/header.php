@@ -8,7 +8,7 @@
 	if( $this -> class_page() == 'sign_up' ) echo $this -> js( [ 'sign_up' ] );
 	?>
 
-	<?=$this -> css( [ 'main', 'menu' ] )?>
+	<?=$this -> css( [ 'main' ] )?>
 	<?=$this -> font( [ 'Roboto', 'Ubuntu', 'Open+Sans', 'Wendy+One' ] )?>
 </head>
 <body>

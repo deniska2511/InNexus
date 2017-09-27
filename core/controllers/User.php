@@ -16,7 +16,7 @@ class User
   {
     return htmlspecialchars( strip_tags( stripslashes( trim( $_GET[ $get ] ) ) ) );
   }
-  public $id, $login, $password, $email, $name, $surname, $birthday, $birthmonth, $birthyear, $city, $avatar, $isActive, $tarif, $status, $level;
+  public $id, $login, $password, $email, $name, $birthday, $birthmonth, $birthyear, $city, $avatar, $expir, $tarif, $status, $purpose;
   public function __construct()
   {
     if( file_exists( "core/controllers/DB.php" ) )
@@ -37,16 +37,15 @@ class User
     $this -> password = $this -> password();
     $this -> email = $this -> email();
     $this -> name = $this -> name();
-    $this -> surname = $this -> surname();
+    $this -> expir = $this -> expir();
     $this -> birthday = $this -> birthday();
     $this -> birthmonth = $this -> birthmonth();
     $this -> birthyear = $this -> birthyear();
     $this -> city = $this -> city();
     $this -> avatar = $this -> avatar();
-    $this -> isActive = $this -> isActive();
+    $this -> purpose = $this -> purpose();
     $this -> tarif = $this -> tarif();
     $this -> status = $this -> status();
-    $this -> level = $this -> level();
   }
   
   protected function id()
@@ -87,12 +86,6 @@ class User
     return $this -> name = $row['username'];
   }
   
-  protected function surname()
-  {
-    $row = $this -> db -> getRow( "SELECT `usersurname` FROM `users` WHERE `id` = ?", [ $this ->  id ] );
-    return $this -> surname = $row['usersurname'];
-  }
-  
   protected function birthday()
   {
     $row = $this -> db -> getRow( "SELECT `birthday` FROM `users` WHERE `id` = ?", [ $this ->  id ] );
@@ -123,10 +116,10 @@ class User
     return $this -> avatar = $row['avatar'];
   }
   
-  protected function isActive()
+  protected function expir()
   {
-    $row = $this -> db -> getRow( "SELECT `isActive` FROM `users` WHERE `id` = ?", [ $this ->  id ] );
-    return $this -> isActive = $row['isActive'];
+    $row = $this -> db -> getRow( "SELECT `expir` FROM `users` WHERE `id` = ?", [ $this ->  id ] );
+    return $this -> expir = $row['expir'];
   }
   
   protected function tarif()
@@ -141,10 +134,10 @@ class User
     return $this -> status = $row['status'];
   }
   
-  protected function level()
+  protected function purpose()
   {
-    $row = $this -> db -> getRow( "SELECT `level` FROM `users` WHERE `id` = ?", [ $this ->  id ] );
-    return $this -> level = $row['level'];
+    $row = $this -> db -> getRow( "SELECT `purpose` FROM `users` WHERE `id` = ?", [ $this ->  id ] );
+    return $this -> purpose = $row['purpose'];
   }
   
   public function login_regist()
@@ -157,12 +150,6 @@ class User
   {
     $row = $this -> db -> getRows( "SELECT * FROM `users`" );
     return $row;
-  }
-  
-  public function lessons_progress( $a )
-  {
-    
-    
   }
   
   
