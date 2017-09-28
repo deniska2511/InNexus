@@ -23,7 +23,7 @@ abstract class Main
 		$this -> db = new DB( $_config['DB']['name'], $_config['DB']['user'], $_config['DB']['password'], $_config['DB']['host'], $_config['DB']['type'], $_config['DB']['charset'] );
 
 		// создание пользователя
-		// $this -> user = new User(); // рассмотрим позже
+		$this -> user = new User(); 
 
 		// получение конфигураций сайта из БД
 		{

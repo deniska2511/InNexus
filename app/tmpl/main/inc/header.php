@@ -6,6 +6,7 @@
 	<?=$this -> js( [ 'jquery', 'main' ] )?>
 	<?php
 	if( $this -> class_page() == 'sign_up' ) echo $this -> js( [ 'sign_up' ] );
+	if( $this -> class_page() == 'activate' ) echo $this -> js( [ 'activate_pin' ] );
 	?>
 
 	<?=$this -> css( [ 'main' ] )?>

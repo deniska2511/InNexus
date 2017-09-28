@@ -23,10 +23,10 @@ class User
       include_once "core/controllers/DB.php";
     elseif( file_exists( "../controllers/DB.php" ) )
       include_once "../controllers/DB.php";
-    if( file_exists( "core/config/default.php" ) )
-      $_config = include "core/config/default.php";
-    elseif( file_exists( "../config/default.php" ) )
-      $_config = include "../config/default.php";
+    if( file_exists( "core/config/connect.php" ) )
+      $_config = include "core/config/connect.php";
+    elseif( file_exists( "../config/connect.php" ) )
+      $_config = include "../config/connect.php";
     $this -> db = new DB( $_config['DB']['name'], $_config['DB']['user'], $_config['DB']['password'], $_config['DB']['host'], $_config['DB']['type'], $_config['DB']['charset'] );
     $this -> id();
     

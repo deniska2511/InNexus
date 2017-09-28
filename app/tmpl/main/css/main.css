@@ -711,3 +711,70 @@ select {
 select:hover {
 	cursor: pointer;
 }
+
+#activate-form {
+	width: 40%;
+	padding: 1vw;
+	border: .03vw solid rgba(0,0,0,.3);
+	border-radius: .2vw;
+}
+
+#activate-form .title-form {
+	font-size: 1.2vw;
+	font-weight: bold;
+	font-family: 'Ubuntu', sans-serif;
+	color: rgba(0,0,0,.9);
+	text-align: center;
+}
+
+#activate-form #desc-form {
+	font-size: .8vw;
+	text-align: center;
+	width: 100%;
+}
+
+#activate-form .input-field {
+	width: 100%;
+	height: 100%;
+}
+
+#activate-form .input-field label {
+	padding-bottom: 1vw;
+}
+
+#activate-form .input-field label:last-child {
+	padding-bottom: 0;
+}
+
+#activate-form .input-field .input-text {
+	width: calc( 85% - 2vw );
+	height: 2vw;
+	padding: 0 1vw;
+	border: .03vw solid rgba(0,0,0,.3);
+	border-radius: .2vw;
+	background: #fafbfc;
+	color: rgba(0,0,0,.8);
+}
+
+#activate-form .submit-field {
+	width: 50%;
+	margin: 0 25%;
+}
+
+#activate-form .submit-field input {
+	height: 2vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

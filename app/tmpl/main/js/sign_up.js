@@ -17,8 +17,21 @@
 				error: function(){
 
 				},
-				success: function(){
-					document.location.href = "http://" + location.hostname + "/sign_up/tarif_plane";
+				success: function( a ){
+					if( a == 'tarif_plane' ){
+						document.location.href = "http://" + location.hostname + "/sign_up/tarif_plane";
+					}
+					if( String( a ) == '100' ){
+						alert( 'Пользователь с данным login уже существует' );
+					}
+					if( String( a ) == '101' ){
+						alert( 'Пользователь с данным email уже существует' );
+					}
+					if( String( a ) == '102' )
+					{
+						alert( 'Пользователь с данным login уже существует' );
+						alert( 'Пользователь с данным email уже существует' );
+					}
 				}
 			}).done(function(){
 
@@ -62,13 +75,13 @@
 				url: "http://" + location.hostname + "/core/actions/sign_up.php",
 				data: { city: city, day: day, month: month, year: year, expir: expir, purpose: purpose, step: a },
 				beforeSend: function(){
-					alert( expir )
+					
 				},
 				error: function(){
 
 				},
 				success: function( a ){
-					document.location.href = "http://" + location.hostname + "/activate/@" + a;
+					document.location.href = "http://" + location.hostname + "/activate/@" + a; 
 				}
 			}).done(function(){
 
