@@ -44,6 +44,11 @@
 	align-items: flex-start;
 }
 
+.flex-end {
+	display: flex;
+	align-items: flex-end;
+}
+
 
 
 /*---------------Стили верхнего контейнера-------------------*/
@@ -764,6 +769,68 @@ select:hover {
 #activate-form .submit-field input {
 	height: 2vw;
 }
+
+/*---------стили header profile-------------*/
+
+#header-profile {
+	height: 25vw;
+}
+
+#horizontal-top-nav {
+	min-height: 3vw;
+	justify-content: space-between;
+	box-shadow: .1vw 0 1vw rgba(0,0,0,.5);
+	padding-bottom: 1vw;
+}
+
+#horizontal-top-nav .middle-container {
+	min-height: 3vw;
+}
+
+#main-user-avatar-block {
+	height: 10vw;
+	width: 10vw;
+	border-radius: 50%;
+	position: absolute;
+}
+
+#main-avatar {
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+}
+
+#top-horizontal-menu {
+	width: 100%;
+	margin-left: 12vw;
+	height: 100%;
+}
+
+#top-horizontal-menu ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+#top-horizontal-menu a {
+	color: rgba(0,0,0,.6);
+	font-size: 1.2vw;
+	font-family: 'Ubuntu', sans-serif;
+	border-bottom: .2vw solid #fff;
+}
+
+#top-horizontal-menu a:hover {
+	color: #1DA1F2;
+	border-bottom: .2vw solid #1DA1F2;
+}
+
+
+
+
+
+
+
+
+
 
 
 

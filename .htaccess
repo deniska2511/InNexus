@@ -2,6 +2,8 @@ RewriteEngine On
 Options +FollowSymlinks
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^exit$ core/actions/exit.php [QSA,L]
+RewriteRule ^exit/$ core/actions/exit.php [QSA,L]
 
 RewriteRule ^([a-z_]+)$ index.php?page=$1&url2&url3&url4 [QSA,L]
 RewriteRule ^([a-z_]+)/$ index.php?page=$1&url2&url3&url4 [QSA,L]
@@ -10,3 +12,6 @@ RewriteRule ^([a-z_]+)/([a-zA-Z_0-9\-]+)/$ index.php?page=$1&url2=$2&url3&url4 [
 
 RewriteRule ^([a-z_]+)/@([a-zA-Z_0-9\-]+)$ index.php?page=$1&url2=$2&url3&url4 [QSA,L]
 RewriteRule ^([a-z_]+)/@([a-zA-Z_0-9\-]+)/$ index.php?page=$1&url2=$2&url3&url4 [QSA,L]
+
+RewriteRule ^@([a-zA-Z_0-9\-]+)$ index.php?page=profile&url2=$1&url3&url4 [QSA,L]
+RewriteRule ^@([a-zA-Z_0-9\-]+)/$ index.php?page=profile&url2=$1&url3&url4 [QSA,L]

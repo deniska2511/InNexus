@@ -25,9 +25,19 @@
 			</form>
 		</div>
 		<div id = "top-links-auth">
+		<?php
+		if( empty( $this -> user -> id ) ){
+		?>
 			<a href = "/sign_in">Войти</a>
 			или
 			<a href = "/sign_up">Регистрация</a>
+		<?php
+		} else {
+		?>
+			<a href = "/exit">Выйти</a>
+		<?php
+		}
+		?>
 		</div>
 	</div>
 </div>

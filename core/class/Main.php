@@ -45,8 +45,16 @@ abstract class Main
 		
 
 		// получение title страницы
-		$query = $this -> db -> getRow( "SELECT `title` FROM `title_page` WHERE `url1` = ? and `url2` = ? and `url3` = ? and `url4` = ?", [ $get['page'], $get[2], $get[3], $get[4] ] );
-		$this -> title_page = $query['title'];
+
+		if( $get['page'] == 'profile' )
+		{
+			$this -> title_page = $this -> user -> name;
+		}
+		else
+		{
+			$query = $this -> db -> getRow( "SELECT `title` FROM `title_page` WHERE `url1` = ? and `url2` = ? and `url3` = ? and `url4` = ?", [ $get['page'], $get[2], $get[3], $get[4] ] );
+			$this -> title_page = $query['title'];
+		}
 
 	}
 
@@ -76,7 +84,7 @@ abstract class Main
 
 	abstract protected function body();
 
-	protected function module( $module )
+	public function module( $module )
 	{
 		if( file_exists( "app/tmpl/{$this -> config['SITE_TMPL']}/modules/{$module}.php" ) )
 			include "app/tmpl/{$this -> config['SITE_TMPL']}/modules/{$module}.php";
